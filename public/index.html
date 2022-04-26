@@ -1,43 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="%PUBLIC_URL%/images/logoSmall.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Turbo Typing Test - 3T" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!-- ------------------------ -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="Stylesheet" href="%PUBLIC_URL%/css/style.css">
+  <script defer src="%PUBLIC_URL%/index.js"></script>
+  <!-- ------------------------ -->
+  <title>Turbo Typing Test - 3T</title>
+</head>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+<body>
+  <header class="header">
+    <img src="./images/logo.png" alt="Logo" class="logo">
+    <nav class="navbar">
+      <ul class="navbar-lists">
+        <li><a href="./" class="navbar-link home-link">Home</a></li>
+        <li><a href="./about.html" class="navbar-link about-link">About</a></li>
+        <li><a href="./contact.html" class="navbar-link contact-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-navbar-btn">
+      <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+    </div>
+  </header>
+
+  <!-- ==================
+                 Main Hero Section 
+          ================== -->
+  <main>
+    <section class="section-hero section" id="main-section">
+      <div class="container">
+        <div id="root"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================
+            Coloring Blank Section 
+          ================== -->
+  <section class="section section-work-data">
+    <div class="container grid grid-four-column">
+    </div>
+  </section>
+
+  <!-- ==================
+             About Website Section 
+          ================== -->
+  <section class="section-biodata section">
+    <div class="container grid grid-two-column">
+      <div class="bio-img">
+        <img src="./images/logoSmall.png" alt="bio-data-image">
+      </div>
+      <!-- Right Side Data -->
+      <div class="bio-data">
+        <h1 class="hero-heading">Turbo Typing Test</h1>
+        <h2 class="common-heading">[3T]</h2>
+        <p class="bio-para">
+          Taking a typing speed test establishes your average typing speed (WPM) and accuracy,
+          which is an important baseline to know so you can increase speed and improve accuracy with practice.
+        </p>
+        <br />
+        <p class="bio-para">
+          TURBO TYPING TEST - 3T can help you track your progress and measure improvement.
+          It will even help your personal development.
+        </p>
+        <div class="bio-data-stats">
+          <p style="font-weight: 700; font-size: 2rem;">
+            Typing Speed
+          </p>
+          <div class="bio-stats">
+            <h3>Slow</h3>
+            <div class="bio-progress-bar">
+              <span>25 WPM</span>
+            </div>
+          </div>
+          <div class="bio-stats">
+            <h3>Average</h3>
+            <div class="bio-progress-bar bio-progress-2">
+              <span>45 WPM</span>
+            </div>
+          </div>
+          <div class="bio-stats">
+            <h3>Fluent</h3>
+            <div class="bio-progress-bar bio-progress-3">
+              <span>60 WPM</span>
+            </div>
+          </div>
+          <div class="bio-stats">
+            <h3>Fast</h3>
+            <div class="bio-progress-bar bio-progress-4">
+              <span>80 WPM</span>
+            </div>
+          </div>
+          <div class="bio-stats">
+            <h3>Pro</h3>
+            <div class="bio-progress-bar bio-progress-5">
+              <span>100 WPM</span>
+            </div>
+          </div>
+        </div>
+        <a href="#main-section" class="btn">Check Your Speed</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================
+             Coloring Blank Section
+          ================== -->
+  <section class="section section-work-data">
+    <div class="container grid grid-four-column">
+    </div>
+  </section>
+
+  <!-- ==================
+                    Blank Section
+          ================== -->
+  <section class="section section-blank">
+    <div class="container">
+    </div>
+  </section>
+
+  <!-- ==================
+                    Fix BG Section
+         ================== -->
+  <section class="section section-freelancing">
+    <div class="overlay">
+    </div>
+    <div class="container">
+      <h2>We are <span>increasing</span> your typing <span>speed</span> and <span>improving</span> your typing
+        <span>accuracy</span>.
+      </h2>
+      <p>
+        Type like Turbo speed fuild running into your arms . . .
+      </p>
+      <a href="#main-section" class="btn">Let's Do it</a>
+    </div>
+  </section>
+
+  <!-- ==================
+                    Blank Section
+         ================== -->
+  <section class="section section-blank">
+    <div class="container">
+    </div>
+  </section>
+
+  <!-- ==================
+                  About Us Section 
+          ================== -->
+  <section class="section-about section">
+    <div class="container section-about-heading">
+      <h2 class="common-heading">About Us</h2>
+    </div>
+    <div class="container grid grid-three-column">
+      <div class="section-about-data">
+        <img src="./images/JenishPatel.jpg" alt="Photo01" class="hero-img">
+        <h3 class="about-us-creator-heading">Jenish Patel</h3>
+        <center>
+          <p class="about-us-creator-para">
+            <a href="https://www.instagram.com/jenish_251/" target="_black">@jenish_251</a>
+          </p>
+          <p class="about-us-creator-para">
+            <a href="mailto:jenish.pce19@sot.pdpu.ac.in">jenish.pce19@sot.pdpu.ac.in</a>
+          </p>
+          <p class="about-us-creator-para">
+            <a href="tel:+918000567555">+91 9427776368</a>
+          </p>
+        </center>
+      </div>
+      <div class="section-about-data">
+        <img src="./images/MirePatel.jpg" alt="Photo01" class="hero-img">
+        <h3 class="about-us-creator-heading">Mire Patel</h3>
+        <center>
+          <p class="about-us-creator-para">
+            <a href="https://www.instagram.com/_mire_patel_/" target="_black">@_mire_patel_</a>
+          </p>
+          <p class="about-us-creator-para">
+            <a href="mailto:mire.pce19@sot.pdpu.ac.in">mire.pce19@sot.pdpu.ac.in</a>
+          </p>
+          <p class="about-us-creator-para">
+            <a href="tel:+918000567555">+91 8000567555</a>
+          </p>
+        </center>
+      </div>
+      <div class="section-about-data">
+        <img src="./images/DivyarajsinhJadeja.jpg" alt="Photo01" class="hero-img">
+        <h3 class="about-us-creator-heading">Divyarajsinh Jadeja</h3>
+        <center>
+          <p class="about-us-creator-para">
+            <a href="https://www.instagram.com/im_divyaraj/" target="_black">@im_divyaraj</a>
+          </p>
+          <p class="about-us-creator-para">
+            <a href="mailto:divyaraj.jce19@sot.pdpu.ac.in">divyaraj.jce19@sot.pdpu.ac.in</a>
+          </p>
+          <p class="about-us-creator-para">
+            <a href="tel:+918000567555">+91 8200706370</a>
+          </p>
+        </center>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================
+                Contact Us Section 
+          ================== -->
+  <section class="section section-contact">
+    <div class="container">
+      <h2 class="common-heading">Contact Us</h2>
+    </div>
+    <div class="section-contact-main contact-container">
+      <form action="https://formspree.io/f/mpzbyggv" method="POST">
+        <div class="grid grid-two-column">
+          <div>
+            <label for="username"></label>
+            <input type="text" name="username" id="username" placeholder="Username" autocomplete="off" required>
+          </div>
+          <div>
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="demo@mail.com" autocomplete="off" required>
+          </div>
+        </div>
+        <div>
+          <label for="subject"></label>
+          <input type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off" required>
+        </div>
+        <div>
+          <label for="textarea"></label>
+          <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Your Message" autocomplete="off"
+            min="5" required></textarea>
+        </div>
+        <div>
+          <input type="submit" name="submit" id="submit" class="btn" value="send message">
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================
+                     Our Footer Section 
+          ================== -->
+  <footer class="section section-footer">
+    <div class="container grid grid-five-column">
+      <div class="f-about">
+        <h3>About</h3>
+        <p>
+          Turbo Typing Test - 3T is a practice test that measures your typing speed and typing accuracy.
+        </p>
+      </div>
+      <!-- end -->
+      <div class="f-links">
+        <h3>Links</h3>
+        <ul>
+          <li>
+            <span>
+              <ion-icon name="caret-forward-outline"></ion-icon>
+            </span>
+            <a href="./">Home</a>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="caret-forward-outline"></ion-icon>
+            </span>
+            <a href="./about.html">About</a>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="caret-forward-outline"></ion-icon>
+            </span>
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- end -->
+      <div class="f-creators">
+        <h3>Creators</h3>
+        <ul>
+          <li>
+            <span>
+              <ion-icon name="caret-forward-outline"></ion-icon>
+            </span>
+            <a href="https://www.instagram.com/_mire_patel_/">Mire Patel</a>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="caret-forward-outline"></ion-icon>
+            </span>
+            <a href="https://www.instagram.com/jenish_251/">Jenish Patel</a>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="caret-forward-outline"></ion-icon>
+            </span>
+            <a href="https://www.instagram.com/im_divyaraj/">Divyarajsinh Jadeja</a>
+          </li>
+        </ul>
+      </div>
+      <!-- end -->
+      <div class="f-address">
+        <h3>Contact</h3>
+        <address>
+          <div>
+            <p>
+              <span>
+                <ion-icon name="location-outline"></ion-icon>
+              </span>
+              Gujarat, India
+            </p>
+          </div>
+          <div>
+            <p>
+              <span>
+                <ion-icon name="call-outline"></ion-icon>
+              </span>
+              <a href="tel:+918000567555">+91 8000567555</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+918000567555">+91 8200706370</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+918000567555">+91 9427776368</a>
+            </p>
+          </div>
+        </address>
+      </div>
+      <!-- end -->
+      <div class="f-address">
+        <h3>E-mail</h3>
+        <address>
+          <div>
+            <p>
+              <span>
+                <ion-icon name="mail-outline"></ion-icon>
+              </span>
+              <a href="mailto:mire.pce19@sot.pdpu.ac.in">mire.pce19@sot.pdpu.ac.in</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                href="mailto:jenish.pce19@sot.pdpu.ac.in">jenish.pce19@sot.pdpu.ac.in</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                href="mailto:divyaraj.jce19@sot.pdpu.ac.in">divyaraj.jce19@sot.pdpu.ac.in</a>
+            </p>
+          </div>
+        </address>
+      </div>
+      <!-- end -->
+    </div>
+    <div class="container social-media-link">
+      <div class="f-social-icons">
+        <table>
+          <tr class="creator-name-row">
+            <td colspan="2">@Mire</td>
+            <td>&nbsp;</td>
+            <td colspan="2">@Jenish</td>
+            <td>&nbsp;</td>
+            <td colspan="2">@Divyarajsinh</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://www.instagram.com/_mire_patel_/" target="_black">
+                <ion-icon name="logo-instagram" class="icons"></ion-icon>
+              </a>
+            </td>
+            <td>
+              <a href="https://www.facebook.com/mire.patel" target="_black">
+                <ion-icon name="logo-facebook" class="icons"></ion-icon>
+              </a>
+            </td>
+            <td>
+              <img src="./images/line.png" alt="|" class="sep-line">
+            </td>
+            <td>
+              <a href="https://www.instagram.com/jenish_251/" target="_black">
+                <ion-icon name="logo-instagram" class="icons"></ion-icon>
+              </a>
+            </td>
+            <td>
+              <a href="https://www.facebook.com/mire.patel" target="_black">
+                <ion-icon name="logo-facebook" class="icons"></ion-icon>
+              </a>
+            </td>
+            <td>
+              <img src="./images/line.png" alt="|" class="sep-line">
+            </td>
+            <td>
+              <a href="https://www.instagram.com/im_divyaraj/" target="_black">
+                <ion-icon name="logo-instagram" class="icons"></ion-icon>
+              </a>
+            </td>
+            <td>
+              <a href="https://www.facebook.com/mire.patel" target="_black">
+                <ion-icon name="logo-facebook" class="icons"></ion-icon>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="f-credits">
+        <p>
+          Copyright ©️ 2022 All Rights Reserved | Turbo Typing Test - 3T
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- ==================
+                JavaScript Section 
+          ================== -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>

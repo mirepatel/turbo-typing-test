@@ -1,0 +1,22 @@
+.bottom-area {
+	width: 50%;
+	justify-content: center;
+	position: relative;
+	margin-top: 15px;
+	.hint {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 5px;
+		font-size: 9pt;
+		font-family: 'Inconsolata', monospace;
+		kbd {
+			background-color: var(--font-color);
+			color: var(--bg-color);
+			padding: 2.5px 8px;
+			margin: 10px;
+			border-radius: 3px;
+			font-size: 9pt;
+		}
+	}
+}

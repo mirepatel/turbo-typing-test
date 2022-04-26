@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Poppins:wght@400;500;600;800&family=Varela+Round&family=Work+Sans:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif, 'Inconsolata', monospace; */
+}
+
+:root {
+    --hero-img-bg:rgb(14,166,171);
+    --heading: rgb(25,34,35);
+    --header:rgb(0, 185, 177);
+    --footer: -webkit-linear-gradient(0deg,rgb(14,166,171) 0%,rgb(9,66,74) 100%);
+    --para: rgb(0, 185, 177);
+    --para-tint: #dfeaea;
+    --white: #fff;
+    --black: rgb(25,34,35);
+    --helper: rgb(20,150,138);
+    --helper-tint: rgb(146, 216, 209);
+    --icons-bg: rgb(146, 216, 209);
+    --footer-icons-bg: rgba(179, 234, 241, 0.286);
+    --bg: -webkit-linear-gradient(0deg,rgba(14, 166, 171, 0.200) 0%,rgb(9,66,74, 0.200) 100%);
+    --gradient: linear-gradient (0deg, rgb(14,166,171) 0%, rgb(9,66,74) 100%);
+    --gradientSupport: -webkit-linear-gradient(0deg,rgb(14,166,171) 0%,rgb(9,66,74) 100%);
+    --shadow: 0px 0px 20px 0px rgb(0 37 35 / 20%);
+    --shadowSupport: 0px 0px 20px 0px rgb(0 37 35 / 50%);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /* lrem = 10px */
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    /* color: var(--helper); */
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+p {
+    color: var(--black);
+    line-height: 1.6;
+    font-size: 1.7rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* ------------------ 
+    Header Section 
+    ------------------ */
+
+.header {
+    padding: 0 4.8rem;
+    height: 8rem;
+    background: var(--gradientSupport);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    height: 5rem;
+}
+
+.navbar-lists {
+    display: flex;
+    gap: 4.8rem;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.2s linear;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    color: var(--black);
+    border-bottom: 2px solid var(--black);
+}
+
+.mobile-navbar-btn {
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+    display: none;
+}
+
+/* stcky navbar */
+.sticky .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 9999;
+    background-color: var(--helper);
+    box-shadow: var(--shadow);
+}
+
+.sticky .section-hero {
+    margin-top: 10rem;
+}
+
+/* ---------------------------- 
+    Reusable-Code Section 
+    ---------------------------- */
+.section {
+    padding: 9rem 0;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    gap: 9rem;
+}
+
+.grid-two-column {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-column {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-column {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-five-column {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+}
+
+.btn {
+    background: var(--gradientSupport);
+    padding: 1.6rem 3.2rem;
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn:active {
+    box-shadow: var(--shadowSupport);
+}
+
+.common-heading {
+    font-size: 4.8rem;
+    font-weight: 600;
+    margin-bottom: 6rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.common-heading::before {
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--helper);
+    border-radius: 50%;
+}
+
+.common-heading::after {
+    content: "";
+    position: absolute;
+    top: 118%;
+    left: 1.5rem;
+    min-width: 20rem;
+    height: 0.3rem;
+    background: var(--helper);
+}
+
+/* ------------------ 
+      Hero Section 
+    ------------------ */
+
+.section-hero {
+    background-image: url(../images/wallpaper01.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    position: relative;
+    transition: all 0.7s linear;
+    text-align: center;
+}
+
+.section-hero-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20%;
+}
+
+.hero-top-data {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--helper);
+}
+
+.hero-heading {
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.hero-para {
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    max-width: 60rem;
+}
+
+.section-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    max-width: 50%;
+    box-shadow: 1rem -1rem 0 0 var(--hero-img-bg);
+    display: inline-block;
+}
+
+/* ------------------------------  
+        About Website Section 
+    ------------------------------ */
+.bio-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-img img {
+    width: 70%;
+    box-shadow: -2rem -2rem 0 0 var(--helper);
+    display: inline-block;
+}
+
+.bio-para {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 60rem;
+}
+
+.bio-data-stats {
+    display: flex;
+    padding: 6.4rem 0;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.bio-stats h3 {
+    margin-bottom: 1rem;
+}
+
+.bio-progress-bar {
+    width: 90%;
+    height: 0.8rem;
+    background-color: var(--para-tint);
+    border-radius: 10rem;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.bio-progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: inherit;
+    background: var(--gradientSupport);
+    border-radius: 10rem;
+
+}
+
+.bio-progress-2::before {
+    width: 45%;
+}
+
+.bio-progress-3::before {
+    width: 60%;
+}
+
+.bio-progress-4::before {
+    width: 80%;
+}
+
+.bio-progress-5::before {
+    width: 100%;
+}
+
+.bio-progress-bar span {
+    position: absolute;
+    top: 1.8rem;
+    width: 5rem;
+    height: 3rem;
+    font-size: 1.1rem;
+    background: var(--helper);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+}
+
+.bio-progress-bar span {
+    left: 20.5%;
+}
+
+.bio-progress-2 span {
+    left: 40.5%;
+}
+
+.bio-progress-3 span {
+    left: 55.5%;
+}
+
+.bio-progress-4 span {
+    left: 75.5%;
+}
+
+.bio-progress-5 span {
+    left: 95.5%;
+}
+
+.bio-progress-bar span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0.8rem solid var(--helper);
+    border-color: transparent;
+    border-bottom-color: var(--helper);
+    top: -1.6rem;
+}
+
+/* --------------------------- 
+    Coloring Blank Section 
+    ---------------------------  */
+
+.section-work-data {
+    background: var(--gradientSupport);
+    text-align: center;
+    transition: all 0.7s linear;
+    color: var(--black);
+}
+
+@keyframes water-wave {
+    0% {
+        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+    }
+    25% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+    50% {
+        border-radius: 20% 80% 20% 80% / 80% 20% 80% 20%;
+    }
+    75% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+    100% {
+        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+    }
+}
+
+/* --------------------- 
+    About Us Section 
+    --------------------- */
+
+.section-about {
+    background: var(--bg);
+    transition: all 0.7s linear;
+}
+
+.section-about-heading {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.about-us-creator-heading {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 2rem;
+}
+
+.about-us-creator-para {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-us-creator-para a {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--hero-img-bg);
+}
+
+.about-us-creator-para a:hover,
+.about-us-creator-para a:active {
+    color: var(--white);
+}
+
+.section-about-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ------------------------ 
+        Fix BG Section 
+    ------------------------ */
+
+.section-freelancing {
+    background-image: url(../images/wallpaper01.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    position: relative;
+    transition: all 0.7s linear;
+    text-align: center;
+}
+
+.section-freelancing .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--helper);
+    opacity: 0.2;
+}
+
+.section-freelancing .container {
+    position: relative;
+}
+
+.section-freelancing h2 {
+    font-size: 5.4rem;
+}
+
+.section-freelancing span {
+    color: rgb(77, 228, 205);;
+}
+
+.section-freelancing h2,
+.section-freelancing p {
+    color: var(--white);
+    margin-bottom: 1.8rem;
+}
+
+/* ------------------------ 
+    Contact-Us Section 
+    ------------------------ */
+
+.section-contact-main {
+    max-width: 70rem;
+    margin: 0 auto;
+    margin-top: 9rem;
+    transition: all 0.3s linear;
+}
+
+.section-contact-main .grid {
+    gap: 3.2rem;
+}
+
+.section-contact-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.section-contact-main input,
+.section-contact-main textarea {
+    padding: 1.5rem 2rem;
+    border: 0.1rem solid #c9c9c9;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-family: "work sans";
+    width: 100%;
+}
+
+.section-contact-main input[type="submit"] {
+    max-width: 30%;
+    border: none;
+}
+
+/* ------------------ 
+     Footer Section 
+    ------------------ */
+
+.section-footer {
+    background: var(--footer);
+    transition: all 0.7s linear;
+    padding-top:5rem;
+    padding-bottom:5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.f-links,
+.f-creators,
+.f-address {
+    margin-left: 1rem;
+}
+
+.section-footer h3 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.f-about p {
+    color: #d0d0d0;
+}
+
+.f-links ul,
+.f-creators ul,
+.f-address address {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    justify-content: center;
+}
+
+.f-links li,
+.f-links a,
+.f-creators li,
+.f-creators a {
+    font-size: 1.6rem;
+    color: #c8c7c7;
+    text-transform: capitalize;
+}
+
+.f-links span,
+.f-creators span,
+.f-address span {
+    margin-right: 1rem;
+}
+
+.f-address p,
+.f-address p a {
+    font-style: normal;
+    color: #adadad;
+}
+
+.social-media-link {
+    text-align: center;
+    color: #adadad;
+    padding-top: 3rem;
+}
+
+.f-social-icons {
+    margin: 5rem 5rem;
+    text-align: center;
+    color: #adadad;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.creator-name-row {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.f-social-icons img {
+    width: 0.2rem;
+    height: 3rem;
+    margin: 10px;
+}
+
+.f-social-icons .icons {
+    width: 3rem;
+    height: 3rem;
+    background: var(--footer-icons-bg);
+    display: inline-block;
+    padding: 1.4rem 1.8rem;
+    margin: 2rem 1.5rem;
+    position: relative;
+    /* color: var(--black); */
+    color: var(--white);
+    animation: water-wave 3s linear infinite;
+    cursor: pointer;
+}
+
+.f-credits p {
+    text-align: center;
+    color: #adadad;
+}
+
+.section-footer a:hover,
+.section-footer a:active {
+    color: var(--white);
+}
+
+/* ------------------ 
+     Scroll Section 
+    ------------------ */
+
+.scrollTop-style {
+    position: fixed;
+    transition: all 0.3s linear;
+    right: 2%;
+    bottom: 5%;
+    z-index: 1;
+}
+
+.scroll-top {
+    width: 3rem;
+    height: 3rem;
+    background: var(--hero-img-bg);
+    opacity: 0.8;
+    display: inline-block;
+    padding: 1.4rem 1.8rem;
+    position: relative;
+    color: var(--black);
+    animation: water-wave 3s linear infinite;
+    cursor: pointer;
+}
+
+/* ------------------ 
+     Media Queries 
+    ------------------ */
+
+/* px */
+/* rem */
+/* em */
+/* 1220px */
+
+/* for 1220px */
+@media (max-width: 76em) {
+    .container {
+        max-width: 130rem;
+        padding: 0 3.2rem;
+    }
+
+    .navbar-lists {
+        gap: 3.4rem;
+    }
+}
+
+/* for 1200px */
+@media (max-width: 75em) {
+    html {
+        font-size: 55%;
+    }
+
+    .container {
+        max-width: 110rem;
+    }
+
+    .grid {
+        gap: 4.8rem;
+    }
+
+    .section-footer .grid {
+        gap: 3.5rem;
+    }
+}
+
+/* for 980px */
+@media (max-width: 980px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .mobile-navbar-btn {
+        display: block;
+        z-index: 9999;
+        /* border: 2px solid var(--black);
+        border-radius: 10px; */
+        color: var(--black);
+    }
+
+    .mobile-nav-icon {
+        width: 4rem;
+        height: 4rem;
+        color: var(--black);
+    }
+
+    .header .logo {
+        /* width: 40%; */
+        height: 40%;
+    }
+
+    .navbar {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--gradientSupport);
+
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        /* display: none; */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        z-index: 999;
+    }
+
+    .navbar-lists {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .navbar-lists .navbar-link:link,
+    .navbar .navbar-lists .navbar-link:visited {
+        color: var(--black);
+        font-size: 2rem;
+    }
+
+    .active .navbar {
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+        display: none;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+        display: block;
+    }
+
+    .section-hero h1{
+        line-height: 1.05;
+    }
+
+    .section-hero {
+        background-repeat: repeat;
+        background-size: 100%;
+    }
+
+    .section-freelancing {
+        background-repeat: repeat;
+        background-size: 100%;
+    }
+    
+    .section-contact .contact-container{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .section-footer .social-media-link .f-social-icons .icons{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .section-biodata .grid-two-column {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .section-about .grid-three-column {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .section-footer .grid-four-column {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-footer .grid-five-column {
+        grid-template-columns: 1fr 1fr;
+    }
+}
