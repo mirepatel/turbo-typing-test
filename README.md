@@ -1,70 +1,131 @@
-### **Advanced Web Technology Project:**
+# 🌿 Turbo Typing Test (3T)
 
-### **Members:**
->  Name: Mire Kishorkumar Patel, RollNo.: 19BCP080, Branch: CSE, Division: 1, Group: G2
->  Name: Jenish Jigneshbhai Patel, RollNo.: 19BCP060, Branch: CSE, Division: 1, Group: G2
->  Name: Divyarajsinh Upendrasinh Jadeja, RollNo.: 19BCP040, Branch: CSE, Division: 1, Group: G2
+### Design × Development
 
-### **Project Discription:**
-# Turbo Typing Test - 3T
-- This is the complete running website for typing speed test.
-- We are increasing your typing speed and improving your typing accuracy by giving the typing test for practice.
-- Our site provides practice test for typing and measures your score of typing speed and tell the accuracy of your typing speed by providing total correct and incorrect words.
-- For typing speed test you need to register yourself in our website then you will able to give the test. For that you can click on LET'S TYPE button to login and start the test.
-- In this application, you can also select time or paragraph types as er your choice for your typing test.
-- You can also logout from this application by clicking on HOME button.
+.˚⊹₊⟡⋆
 
-### **Creators:**
-> Mire Patel
-> Jenish Patel
-> Divyarajsinh Jadeja
+An advanced web utility application built with React and TypeScript designed to improve typing performance, speed, and characters-per-minute accuracy. Equipped with real-time performance evaluation tracking, integrated Redux global store configurations, modular UI themes, and secure authentication gates.
 
-### **Technology we have used:**
-> HTML
-> CSS
-> SCSS
-> JAVASCRIPT
-> TYPESCRIPT
-> JSON
-> REACTJS
-> AUTH0
-> FORMSPREE
+---
 
-NOTE: we took a reference of already existing [typing-test](https://salmannotkhan.github.io/typing-test)
+## ✦ About
 
-### **To execute the application:**
+Turbo Typing Test is a full-featured application engineered to evaluate typing accuracy through a clean dashboard. Moving away from standard static inputs, the platform employs structural hooks, performance recorders, and automated timers to deliver immediate granular analytical scoring to the user.
 
-> **Note:**  
-> For execution, having internet is mandatory.
+The codebase showcases robust type layouts, scalable Redux centralized state patterns, secure user group gates via third-party providers, and layered style configurations.
 
--   Download required packages.
-The required packages for execution are given below:
-"dependencies": {
-    "@auth0/auth0-react": "^1.10.0",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.4.0",
-    "@types/node": "^17.0.10",
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
-    "@types/react-redux": "^7.1.22",
-    "bootstrap": "^5.1.3",
-    "eslint-config-react-app": "^7.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "react-redux": "^7.2.6",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
-    "redux": "^4.1.2",
-    "sass": "^1.49.0",
-    "sass-loader": "^12.4.0",
-    "typescript": "^4.5.4",
-    "web-vitals": "^2.1.3"
-  },
+₊⊹
 
-- After downloading the all required packages run the application by typing 'npm start' in console.
+---
 
-> **Note:**  
-> Make sure that your application is running on PORT :- localhost:3000, it's good if you run on that port only.
+## ✦ Features
+
+🌱 **Central State Management** • Core application event bindings, timer hooks, and analytical parameters managed via structured Redux global state trees.  
+🌱 **Secure Session Profiles** • Enterprise-ready user authentication workflows and access protection powered seamlessly by Auth0 integration.  
+🌱 **Real-Time Canvas Analytics** • Live calculations for Word-Per-Minute (WPM) speed metrics, overall character accuracy ratios, and tracking for correct/incorrect words.  
+🌱 **Dynamic Customization** • Interface capabilities allowing users to customize testing intervals, time limits, and custom word or paragraph data pools.  
+🌱 **Styling & Theme Modals** • Highly-polished design architecture supported by an extensible SCSS theme engine handling fluid animated layouts.  
+🌱 **Integrated Command Pallet** • Quick-access utility search configurations built with standalone component layers to navigate application processes smoothly.  
+
+₊⊹
+
+---
+
+## ✦ Tech
+
+![React](https://img.shields.io/badge/React-0f172a?style=flat&logo=react&logoColor=white&labelColor=0f172a) •
+![TypeScript](https://img.shields.io/badge/TypeScript-0f172a?style=flat&logo=typescript&logoColor=white&labelColor=0f172a) •
+![Redux](https://img.shields.io/badge/Redux-0f172a?style=flat&logo=redux&logoColor=white&labelColor=0f172a) •
+![Auth0](https://img.shields.io/badge/Auth0-0f172a?style=flat&logo=auth0&logoColor=white&labelColor=0f172a) •
+![Sass](https://img.shields.io/badge/Sass-0f172a?style=flat&logo=sass&logoColor=white&labelColor=0f172a)
+
+₊⊹
+
+---
+
+## ✦ Architecture
+
+```text
+turbo-typing-test/
+├── package.json
+├── tsconfig.json             # TypeScript compiler token settings
+├── README.md
+├── LICENSE
+├── public/                   # Public page shells & local graphics asset mapping
+│   ├── index.html
+│   └── css/                  # Legacy visual layer configurations
+└── src/
+    ├── App.js                # Core routing interface wrapper
+    ├── index.tsx             # Root initialization deployment anchor
+    ├── TypingTestPallet.tsx  # Master testing interactive layout canvas
+    ├── components/           # Isolated modular layout blocks
+    │   ├── CommandPallet.tsx # Interactive keyboard utility engine
+    │   ├── Test.tsx          # Keypress input field tracking context
+    │   ├── Result.tsx        # Analytical reporting computation interface
+    │   ├── Header.tsx
+    │   └── Footer.tsx
+    ├── helpers/              # Asynchronous system recorders & timers
+    │   ├── startTimer.ts
+    │   ├── recordTest.ts
+    │   └── resetTest.ts
+    ├── store/                # Unified Redux global state controllers
+    │   ├── store.ts
+    │   ├── actions.ts
+    │   └── reducer.ts
+    ├── stylesheets/          # Layered variables & animation themes
+    │   ├── themes.scss
+    │   └── AnimatedTheme.scss
+    └── wordlists/            # JSON dataset matrices for test paragraphs
+
+```
+
+₊⊹
+
+---
+
+## ✦ Setup & Operations
+
+To spin up this application in a local workspace environment, execute the following shell commands:
+
+```bash
+# Ingest local node dependency layers
+npm install
+
+# Initialize local developer compilation server
+npm start
+
+```
+
+> ⚠️ **Configuration Note:** An active network connection is required to authenticate database contexts with Auth0 servers during operational test sessions.
+
+₊⊹
+
+---
+
+## ✦ Collaboration Credits
+
+This platform was developed as part of an Advanced Web Technology collective project.
+
+* **Mire Kishorkumar Patel** (Computer Science & Engineering)
+* **Jenish Jigneshbhai Patel** (Computer Science & Engineering)
+* **Divyarajsinh Upendrasinh Jadeja** (Computer Science & Engineering)
+
+*Note: Base interaction references were analyzed from public typing baseline project frameworks.*
+
+₊⊹
+
+---
+
+## ✦ Connect
+
+[LinkedIn](https://www.linkedin.com/in/mirepatel) • [Portfolio](https://mirepatel.framer.website/) • [Email](mailto:mirepatel@gmail.com)
+
+---
+
+**C**ode
+
+**C**reativity
+
+**C**ontinuous Learning
+
+•··
